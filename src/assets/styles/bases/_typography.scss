@@ -1,0 +1,67 @@
+@use '../abstracts/variables';
+@use '../abstracts/colors';
+
+// Font-size
+$primary-font-size: 16px;
+$lg-font-size: 20px;
+$md-font-size: 14px;
+$sm-font-size: 12px;
+
+$h1-font-size-sm: 2.8rem;
+$h1-font-size-md: 3.5rem;
+$h1-font-size-lg: 5rem;
+
+$h2-font-size-sm: 2.1rem;
+$h2-font-size-md: 2.5rem;
+$h2-font-size-lg: 2.8rem;
+
+$h3-font-size-sm: 1.5rem;
+$h3-font-size-md: 1.8rem;
+$h3-font-size-lg: 2rem;
+
+$h4-font-size-lg: 1rem;
+
+// Font-family
+$primary-font: 'Montserrat', sans-serif;
+$title-font: 'Amatic SC', cursive;
+
+html {
+    font-size: $primary-font-size;
+    font-family: $primary-font;
+    color: colors.$white;
+
+    h1 {
+        font-size: $h1-font-size-sm;
+        font-family: $title-font;
+    
+        @media #{variables.$screen-medium-plus} {
+            font-size: $h1-font-size-md;
+        }
+    
+        @media #{variables.$screen-large-plus} {
+            font-size: $h1-font-size-lg;
+        }
+    }
+    
+    h2 {
+        font-size: $h2-font-size-sm;
+        font-family: $title-font;
+    
+        @media #{variables.$screen-medium-plus} {
+            font-size: $h2-font-size-md;
+        }
+    
+        @media #{variables.$screen-large-plus} {
+            font-size: $h2-font-size-lg;
+        }
+    }
+    
+    h3 {
+        font-size: $h3-font-size-lg;
+        font-family: $title-font;
+    }
+
+    h4 {
+        font-size: $h4-font-size-lg;
+    }
+}

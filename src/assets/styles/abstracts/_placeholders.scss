@@ -1,0 +1,9 @@
+@use '../abstracts/colors';
+
+%dark-background {
+    background-color: colors.$dark-grey;
+}
+
+%medium-background {
+    background-color: colors.$medium-grey;
+}

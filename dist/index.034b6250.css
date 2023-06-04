@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  display: grid;
+}
+
+body header {
+  height: auto;
+  grid-column: 1 / 13;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  display: grid;
+}
+
+body header #header-promo {
+  grid-area: 1 / 2 / 2 / 12;
+}
+
+body header nav {
+  grid-area: 2 / 2 / 3 / 12;
+}
+
+body main {
+  height: auto;
+  grid-column: 2 / 12;
+}
+
+body footer {
+  height: auto;
+  grid-column: 1 / 13;
+}
+
+header nav ul {
+  justify-content: space-between;
+  display: flex;
+}
+
+footer #project-infos {
+  justify-content: space-around;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.034b6250.css.map */

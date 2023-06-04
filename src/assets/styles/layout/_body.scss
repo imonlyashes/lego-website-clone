@@ -1,0 +1,5 @@
+@use '../abstracts/placeholders';
+
+body {
+    @extend %dark-background;
+}

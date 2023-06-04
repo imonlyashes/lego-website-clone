@@ -1,0 +1,6 @@
+// Breakpoints
+$screen-medium: 768px;
+$screen-large: 1024px;
+
+$screen-medium-plus: '(min-width: #{$screen-medium})';
+$screen-large-plus: '(min-width: #{$screen-large})';

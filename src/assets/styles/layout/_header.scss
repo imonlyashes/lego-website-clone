@@ -1,0 +1,251 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../bases/typography';
+@use '../abstracts/placeholders';
+
+header {
+    #header-div_promo {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            display: none;
+            transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+            @media #{variables.$screen-large-plus} {
+                display: block;
+
+                @include mixins.btn-reset();
+                @include mixins.btn(colors.$medium-orange);
+
+                &:focus {
+                    @include mixins.btn-focus(colors.$yellow);
+                }
+
+                &:hover {
+                    @include mixins.btn-hover(colors.$yellow);
+                }
+            }
+        }
+
+        #header-div-promo_infos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .fa-solid {
+                color: colors.$white;
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: color .3s ease-in-out;
+
+                &:focus {
+                    color: colors.$yellow;
+                    outline: 2px solid colors.$white;
+                }
+    
+                &:hover {
+                    color: colors.$yellow;
+                    transition: color .3s ease-in-out;
+                }
+            }
+
+            p {
+                color: colors.$white;
+                width: 75vw;
+                text-align: center;
+                font-size: typography.$sm-font-size;
+
+                @media #{variables.$screen-medium-plus} {
+                    width: 70vw;
+                }
+
+                @media #{variables.$screen-large-plus} {
+                    width: 40vw;
+                }
+            }
+        }
+
+        #header-div-promo_profile {
+            display: none;
+
+            @media #{variables.$screen-large-plus} {
+                display: block;
+            }
+
+            a {
+                font-size: 1.7rem;
+                color: colors.$medium-orange;
+                transition: color .3s ease-in-out;
+
+            @media #{variables.$screen-large-plus} {
+                font-size: 1.3rem;
+            }
+
+            &:focus {
+                color: colors.$yellow;
+                outline: 2px solid colors.$white;
+            }
+
+            &:hover {
+                color: colors.$yellow;
+                transition: color .3s ease-in-out;
+            }
+            }
+        }
+
+        #header-div-promo_close {
+            display: block;
+
+            @media #{variables.$screen-large-plus} {
+                display: none;
+            }
+
+            .fa-xmark {
+                font-size: 1.7rem;
+                color: colors.$medium-orange;
+                cursor: pointer;
+                transition: color .3s ease-in-out;
+    
+                @media #{variables.$screen-large-plus} {
+                    font-size: 1.3rem;
+                }
+    
+                &:focus {
+                    color: colors.$yellow;
+                    outline: 2px solid colors.$white;
+                }
+    
+                &:hover {
+                    color: colors.$yellow;
+                    transition: color .3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    #header_nav {
+        @extend %medium-background;
+
+        #header-nav_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+    
+            nav {
+                width: 60%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                #header-nav-div_burger {
+                    display: block;
+
+                    @media #{variables.$screen-large-plus} {
+                        display: none;
+                    }
+
+                    button {
+                        @include mixins.btn-reset();
+                        background-color: colors.$medium-orange;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                        font-size: 0.6rem;
+                        text-transform: uppercase;
+                        cursor: pointer;
+
+                        .burger-icon {
+                            font-size: 1.5rem;
+                            display: block;
+                            transition: background-color .3s ease-in-out;
+                        }
+
+                        &:focus {
+                            background-color: colors.$yellow;
+                            outline: 2px solid colors.$medium-orange;
+                        }
+
+                        &:hover {
+                            background-color: colors.$yellow;
+                            transition: background-color .3s ease-in-out;
+                        }
+                    }
+                }
+
+                .logo {
+                    margin-right: 30px;
+
+                    &:focus {
+                        outline: 2px solid colors.$white;
+                    }
+                }
+
+                #header-nav-div {
+                    display: none;
+
+                    @media #{variables.$screen-large-plus} {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    ul {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin-bottom: 0;
+            
+                        li {
+                            text-decoration: none;
+                            list-style-type: none;
+    
+                            a {
+                                @include mixins.link-nav(colors.$yellow, 0.9rem);
+
+                                &:focus {
+                                    @include mixins.link-nav-focus(colors.$white, colors.$medium-orange);
+                                }
+    
+                                &:hover {
+                                    @include mixins.link-nav-hover(colors.$white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #header-nav_icons {
+                width: 100px;
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    color: colors.$white;
+                    font-size: 1.7rem;
+                    transition: color .3s ease-in-out;
+
+                    @media #{variables.$screen-large-plus} {
+                        font-size: 1.3rem;
+                    }
+
+                    &:focus {
+                        color: colors.$yellow;
+                        outline: 2px solid colors.$white;
+                    }
+
+                    &:hover {
+                        color: colors.$yellow;
+                        transition: color .3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@use './colors';
+@use './variables';
+
+// Boutons
+@mixin btn-reset() {
+    background: none;
+    border: none;
+}
+
+@mixin btn($color) {
+    background-color: $color;
+    color: colors.$medium-grey;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+@mixin btn-focus($color) {
+    background-color: $color;
+    color: colors.$medium-grey;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    outline: 2px solid colors.$dark-orange;
+}
+
+@mixin btn-hover($color) {
+    background-color: $color;
+    color: colors.$medium-grey;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+// Liens de navigation
+@mixin link-nav($color, $font) {
+    text-decoration: none;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: $color;
+    font-weight: bold;
+    font-size: $font;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-nav-hover($color) {
+    color: $color;
+    text-decoration: underline;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-nav-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+    text-decoration: underline;
+}
+
+// Liens noms produits
+@mixin link-product($color) {
+    color: $color;
+    text-decoration: none;
+    list-style-type: none;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-product-hover($color) {
+    color: $color;
+    text-decoration: underline;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-product-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+    text-decoration: underline;
+}
+
+// Liens voir détails produits
+@mixin link-details-product($color, $font) {
+    text-decoration: none;
+    list-style-type: none;
+    color: $color;
+    font-weight: bold;
+    font-size: $font;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-details-product-hover($color) {
+    color: $color;
+    text-decoration: underline;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-details-product-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+    text-decoration: underline;
+}
+
+// Boîtes produits avec scroll
+@mixin scroll-box() {
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    overflow-x: hidden;
+    cursor: grab;
+    
+        @media #{variables.$screen-large-plus} {
+            overflow: inherit;
+            cursor: auto;
+        }
+}
+
+// Liens localisation footer
+@mixin link-footer-localisation($color) {
+    color: $color;
+    text-decoration: none;
+    list-style-type: none;
+    transition: color .3s ease-in-out;
+}
+
+@mixin link-footer-localisation-hover($color) {
+    color: $color;
+    transition: color .3s ease-in-out;
+}
+
+@mixin link-footer-localisation-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+}
+
+// Liens nav footer
+@mixin link-footer-nav($color) {
+    color: $color;
+    text-decoration: none;
+    list-style-type: none;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-footer-nav-hover($color) {
+    color: $color;
+    text-decoration: underline;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-footer-nav-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+    text-decoration: underline;
+}
+
+// Liens legal footer
+@mixin link-footer-legal($color, $font) {
+    text-decoration: none;
+    list-style-type: none;
+    color: $color;
+    font-size: $font;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-footer-legal-hover($color) {
+    color: $color;
+    text-decoration: underline;
+    transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+
+@mixin link-footer-legal-focus($color, $outline) {
+    color: $color;
+    outline: 2px solid $outline;
+    text-decoration: underline;
+}
